@@ -1,0 +1,317 @@
+:root{
+    --primary: blue;
+    --box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.531);
+
+}
+
+body{
+    margin: 0;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* global */
+
+.global{
+    background: rgb(255, 191, 0);
+}
+.global > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    color: white;
+}
+
+/* header */
+
+header{
+    background: blue;
+
+}
+header > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    align-items: center;
+    color: white;
+}
+header ul {
+    display: flex;
+    list-style-type: none;
+}
+
+header ul li {
+    margin-left: 16px;
+    font-weight: bolder;
+    font-size: 22px;
+
+}
+
+header ul li:hover{
+    cursor: pointer;
+    background: red;
+    font-size: 30px;
+    transform: scale(1.5);
+}
+
+.logo {
+    background: white;
+    color: blue;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    /* Border radius changes the height and weidth from the square form to the circle form  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo div {
+    border: 3px dotted blue;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* we need these flex function to bring the logo in the middle  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+/* ======hero */
+.hero{
+    background: url(./image/1.jpg) no-repeat center center ;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.hero-content {
+    background: rgba(0, 0, 0, 0.572);
+    color: white;
+    width: 500px;
+    padding: 32px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hero-content hr {
+    width: 100%;
+}
+
+/* latest  post section*/
+.main{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.articles{
+    
+    width: 66%;
+
+}
+
+
+article{
+    display: flex;
+    gap: 16px;
+    box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.531);
+    padding: 20px 16px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.art-img{
+    width: 400px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+article .btn{
+    float: right;
+} 
+.btn{
+    background: orangered;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+
+/* ------side links ------ */
+
+.side-links{
+    /* background: blue; */
+    width: 34%;
+    margin-top: 24px;
+}
+.country{
+    background: rgba(173, 173, 6, 0.627);
+    padding: 16px;
+    border-radius: 5px;
+}
+.date{
+    background: rgba(173, 173, 6, 0.627);
+    padding: 16px;
+    border-radius: 5px;
+    margin-top: 32px ;
+}
+
+
+
+/* recc */
+.recc{
+    background: rgba(255, 255, 0, 0.914);
+    padding: 46px;
+    margin-top: 64px;
+    
+}
+
+.card-list{
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    box-shadow: var(--box-shadow);
+    background: white;
+    padding-bottom: 32px;
+    border-radius: 10px;
+}
+.card img{
+    border-radius: 10px 10px 0 0 ;
+}
+
+
+/* subscribe section */
+
+.subs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+.subs input {
+    border-radius: 5px;
+    line-height: 32px;
+}
+
+/* footer */
+.footer{
+    background: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* ======media query ==== */
+
+/* tablet */
+/* @media (max-width: 992px) {
+    .global {
+        background: red;
+    }
+ } */
+
+ /* @media (768px < width <= 992px)  this is to use to work exact between 768 px to 992px*/
+
+/* phones */
+ /* @media (max-width: 768px)  { */
+ /* @media (max-width: 768px)  {
+
+    .global{
+        background: rgb(255, 0, 144);
+        /* display: none; */
+    
+ /* If we are using min width smaller screen size at  */
+
+/* Tablets  */
+ @media (max-width: 992px){
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+    .articles{
+    
+        width: 100%;
+    
+    }
+    .side-links {
+        /* background: blue; */
+        width: 100%;
+        /* margin-top: 24px; */
+        display: flex;
+        gap: 32px;
+    }
+    .country,
+    .date {
+        width: 50%;
+        height: 200px;
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+ }
+
+
+ /* phones */
+ @media (max-width: 768px) {
+    .articles{
+    
+        width: 100%;
+    
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        box-shadow: -5px 5px 10px 5px rgba(128, 128, 128, 0.531);
+        padding: 20px 16px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .art-img{
+        width: 100%;
+    }
+    .side-links {
+        /* background: blue; */
+        width: 100%;
+        /* margin-top: 24px; */
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .country,
+    .date {
+        width: 100%;
+        height: 200px;
+        margin-top: 16px 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    article .btn{
+        width: 100%;
+    }
+     
+    
+    
+ }

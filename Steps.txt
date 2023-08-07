@@ -1,0 +1,8 @@
+For each project 
+
+Step 1. Run git init
+    use git status to check the status of your process
+
+Step 2 : add all the files to the index oe stage by using git add. or filenamew 
+
+3. run git commit -m "first commit"
